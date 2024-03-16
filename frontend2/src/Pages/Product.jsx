@@ -18,7 +18,7 @@ import { RelatedProducts } from '../Components/RelatedProducts/RelatedProducts';
         <Breadcrums product={product}/>
        <PCD product={product} />
         <DescriptionBox />
-        <RelatedProducts product={product}/>
+        
        </div>
   )
 }

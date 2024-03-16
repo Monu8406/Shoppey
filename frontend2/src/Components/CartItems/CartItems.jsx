@@ -46,7 +46,7 @@ const amount = getTotalCartAmount();
 
 	const handlePayment = async () => {
 		try {
-			const orderUrl = "http://localhost:4000/api/payment/orders";
+			const orderUrl = "https://shoppey-4.onrender.com/api/payment/orders";
 			const { data } = await axios.post(orderUrl, { amount: amount });
 			console.log(data);
 			initPayment(data.data);

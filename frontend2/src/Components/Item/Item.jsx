@@ -5,7 +5,7 @@ import { Product } from '../../Pages/Product';
 const Item = (props) => {
   return (
     <div className='item'>
-    <Link to={`product/${props.id}`}> <img  onClick={window.scrollTo(0,0)} src={props.image} alt="" /> </Link>
+      {localStorage.getItem('auth-token')?<Link to={`product/${props.id}`}> <img  onClick={window.scrollTo(0,0)} src={props.image} alt="" /> </Link>:<Link to="/"> <img  onClick={window.scrollTo(0,0)} src={props.image} alt="" /> </Link>}
      <p className='name'>{props.name}</p>
     <div className='item-prices'>
         <div className="item-price-new">
