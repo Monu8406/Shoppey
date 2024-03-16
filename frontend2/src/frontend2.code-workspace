@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "frontend2",
+			"path": ".."
+		},
+		{
+			"name": "build",
+			"path": "../../../Allfolders/projects/frontend2/build"
+		}
+	],
+	"settings": {}
+}
