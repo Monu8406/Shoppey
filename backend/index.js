@@ -15,6 +15,7 @@ app.use(cors());
 
 const PORT = process.env.PORT  ;
  //Database connection with moongo db;
+ mongoose.set('strictQuery',true);
  mongoose.connect(process.env.MONGO_URL).then(()=>console.log("Connected successfully ")).
  catch((error)=>
  {})
