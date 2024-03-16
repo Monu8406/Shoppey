@@ -15,7 +15,7 @@ export const LoginSignup = () => {
   const login = async () => {
     
     let responseData;
-    await fetch('http://localhost:4000/login', {
+    await fetch('https://shoppey-4.onrender.com/login', {
       method: "POST",
       headers: {
         Accept: 'application/form-data',
@@ -35,7 +35,7 @@ export const LoginSignup = () => {
   const signup = async () => {
     
     let responseData;
-    await fetch('http://localhost:4000/signup', {
+    await fetch('https://shoppey-4.onrender.com/signup', {
       method: "POST",
       headers:{
         Accept:'application/form-data',

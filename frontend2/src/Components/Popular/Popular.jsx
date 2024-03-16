@@ -6,7 +6,7 @@ import Item from '../Item/Item';
 export const Popular = () => {
     const [popularProducts, setPopularProducts] = useState([]);
    useEffect(() => {
-        fetch("http://localhost:4000/popularinwomen")
+        fetch("https://shoppey-4.onrender.com/popularinwomen")
             .then((response) => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

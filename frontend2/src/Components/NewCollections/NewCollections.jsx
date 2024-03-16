@@ -9,7 +9,7 @@ const NewCollections = () => {
 
   const [new_collection,setnew_collection] =  useState([]);
   useEffect(()=>{
-  fetch('http://localhost:4000/newcollections')
+  fetch('https://shoppey-4.onrender.com/newcollections')
   .then((response)=>response.json())
   .then((data)=>setnew_collection(data));
   },[])
