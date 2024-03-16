@@ -3,7 +3,8 @@
     flex-direction: column;
   align-items: center;
   gap: 10px;
-  height: 90vh;
+  height: auto;
+  box-sizing: border-box;
 }
 .popular h1{
     color: #171717;
@@ -12,6 +13,7 @@
 
 }
 
+
 .popular hr{
     width: 200px;
     height: 6px;
@@ -19,9 +21,10 @@
     background: #252525;
 }
 .popular-item{
- margin-top:50px;
+ margin-top: 0;
  display: flex;
  gap: 30px;
+ 
 }
 
 @media(max-width:1280px){
@@ -93,6 +96,7 @@
      display: grid;
      grid-template-columns: 1fr 1fr ;
      gap: 20px;
+     height: auto;
      
     }
  

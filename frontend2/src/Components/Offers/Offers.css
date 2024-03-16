@@ -1,6 +1,7 @@
 .offers{
+  
   width: 65%;
-
+  margin-top: 300px;
   height: 60vh;
   display: flex;
   margin: auto;
@@ -8,7 +9,9 @@
   margin-bottom: 150px;
   background: linear-gradient(180deg, #fde1ff 0% ,#e1ffea22 60%);
 }
-
+.offers-rigth img{
+  height: 200px;
+ }
 .offers-left{
     flex: 1;
     display: flex;
@@ -171,7 +174,9 @@
 
 
 
-
+.offers{
+  margin-top: 250px;
+}
 
 
 
