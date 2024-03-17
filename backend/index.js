@@ -31,7 +31,8 @@ const PORT = process.env.PORT  ;
  });
 
  const upload = multer({ storage: storage });
-  app.use('/picture', express.static('upload/images'));
+ 
+  app.use('/picture',express.static('upload/images'));
 
 
   const Product =  mongoose.model("Product",{
