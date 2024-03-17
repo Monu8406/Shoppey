@@ -73,7 +73,7 @@ const PORT = process.env.PORT  ;
     console.log( `http://localhost:4000/picture/${req.file.filename}`)
     res.json({                                            
         success: 1,                                       
-        image_url: `http://localhost:4000/picture/${req.file.filename}`
+        image_url: `https://shoppey-4.onrender.com/${req.file.filename}`
     });
 });
 
