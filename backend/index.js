@@ -31,7 +31,7 @@ const PORT = process.env.PORT  ;
  });
 
  const upload = multer({ storage: storage });
-  app.use('/images', express.static('upload/images'));
+  app.use('/picture', express.static('upload/images'));
 
 
   const Product =  mongoose.model("Product",{
@@ -72,10 +72,10 @@ const PORT = process.env.PORT  ;
 
  app.post('/upload', upload.single('product'),(req, res) => {
 
-    
+    console.log(`https://shoppey-4.onrender.com/picture/${req.file.filename}`);
     res.json({                                            
         success: 1,                                       
-        image_url: `http://localhost:4000/images/${req.file.filename}`
+        image_url: `https://shoppey-4.onrender.com/picture/${req.file.filename}`
     });
 });
 
