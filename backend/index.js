@@ -1,6 +1,4 @@
 
-
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -29,9 +27,12 @@ const PORT = process.env.PORT  ;
     return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     }
  });
+
  const upload = multer({ storage: storage });
 
+ 
   app.use('/picture',express.static('upload/images'));
+  app.use('/images', express.static('bakend/upload/images'));
   const Product =  mongoose.model("Product",{
   id:{
         type:Number,
@@ -69,10 +70,10 @@ const PORT = process.env.PORT  ;
  });
 
  app.post('/upload', upload.single('product'),(req, res) => {
-  
+    console.log( `http://localhost:4000/picture/${req.file.filename}`)
     res.json({                                            
         success: 1,                                       
-        image_url:`https://shoppey-4.onrender.com/picture/${req.file.filename}`
+        image_url: `http://localhost:4000/picture/${req.file.filename}`
     });
 });
 
