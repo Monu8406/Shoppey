@@ -87,7 +87,7 @@ app.post("/addproduct", async (req,res) => {
           id = last_product.id+1;
     }
     else{
-        id =1;
+        id =0;
     }
     const product = new Product({
         id:id,
