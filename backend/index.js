@@ -22,8 +22,9 @@ const PORT = process.env.PORT  ;
      res.send(" <h1> Expres App is Running </h1>");
  });
  const storage = multer.diskStorage({
-    destination: './upload/images',
+    destination: '../frontend2/src/Components/images',
     filename: (req, file, cb) => {
+        
     return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`);
     }
  });
@@ -70,10 +71,10 @@ const PORT = process.env.PORT  ;
  });
 
  app.post('/upload', upload.single('product'),(req, res) => {
-    console.log(`https://shoppey-4.onrender.com/picture/${req.file.filename}`)
+    console.log(`../images/${req.file.filename}`)
     res.json({                                            
         success: 1,                                       
-        image_url: `../Assets/${req.file.filename}`
+        image_url: `../images/${req.file.filename}`
     });
 });
 
