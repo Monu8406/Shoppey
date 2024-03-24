@@ -70,10 +70,10 @@ const PORT = process.env.PORT  ;
  });
 
  app.post('/upload', upload.single('product'),(req, res) => {
-    console.log( `http://localhost:4000/picture/${req.file.filename}`)
+    console.log(`https://shoppey-4.onrender.com/picture/${req.file.filename}`)
     res.json({                                            
         success: 1,                                       
-        image_url: `https://shoppey-4.onrender.com/${req.file.filename}`
+        image_url: `../Assets/${req.file.filename}`
     });
 });
 
