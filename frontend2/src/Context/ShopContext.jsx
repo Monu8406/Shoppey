@@ -82,6 +82,7 @@ export const ShopContextProvider = (props)=>{
          if(cartItems[item]>0)
         {                
           let itemInfo = all_product.find((product)=>product.id===Number(item));
+          console.log(itemInfo);
           totalAmount+= itemInfo.new_price * cartItems[item];
           }
         }    

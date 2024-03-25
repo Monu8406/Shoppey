@@ -39,8 +39,7 @@ export const LoginSignup = () => {
       method: "POST",
       headers:{
         Accept:'application/form-data',
-        'Content-Type':'application/json',
-      },
+        'Content-Type':'application/json', },
       body:JSON.stringify(formData)
     }).then((response) => response.json()).then((data) => responseData = data)
     if (responseData.success) {
