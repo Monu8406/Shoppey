@@ -5,11 +5,10 @@ import cart_icon  from '../Assets/cart_icon.png'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
-import nav_dropdown from  '../Assets/nav_dropdown.png';
+import na6v_dropdown from  '../Assets/nav_dropdown.png';
 export const Navbar = () => {
 
     const  [menu, setmenu] = useState("shop");
-
     const {getTotalCartItems} =  useContext(ShopContext);
     const  menuRef = useRef();
 
